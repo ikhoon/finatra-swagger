@@ -1,10 +1,12 @@
 name := "finatra-swagger"
 
-organization := "com.jakehschwartz"
+organization := "com.github.ikhoon"
 
-scalaVersion := "2.12.3"
+scalaVersion := "2.12.4"
 
-sbtVersion := "0.13.16"
+crossScalaVersions := Seq("2.11.11", "2.12.4")
+
+//sbtVersion := "0.13.16"
 
 libraryDependencies ++= Seq(
   "com.twitter" %% "finatra-http" % "2.13.0",
@@ -36,14 +38,15 @@ publishTo := {
 
 // License of your choice
 licenses := Seq("Apache 2" -> url("http://www.apache.org/licenses/LICENSE-2.0.txt"))
-homepage := Some(url("https://(your project url)"))
+homepage := Some(url("https://github.com/ikhoon/finatra-swagger"))
 scmInfo := Some(
   ScmInfo(
-    browseUrl = url("https://github.com/jakehschwartz/finatra-swagger"),
-    connection = "https://github.com/jakehschwartz/finatra-swagger.git"
+    browseUrl = url("https://github.com/ikhoon/finatra-swagger"),
+    connection = "https://github.com/ikhoon/finatra-swagger.git"
   )
 )
 developers := List(
+  Developer(id="ikhoon", name="Ikhoon Eom", email="ih.pert@gmail.com", url=url("https://github.com/ikhoon")),
   Developer(id="jakehschwartz", name="Jake Schwartz", email="jakehschwartz@gmail.com", url=url("https://www.jakehschwartz.com")),
   Developer(id="xiaodongw", name="Xiaodong Wang", email="xiaodongw79@gmail.com", url=url("https://github.com/xiaodongw"))
 )

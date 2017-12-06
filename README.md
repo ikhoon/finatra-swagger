@@ -1,12 +1,11 @@
 # finatra-swagger
 
--[![Join the chat at https://gitter.im/finatra-swagger/Lobby](https://badges.gitter.im/jakehschwartzfinatra-swagger.svg)](https://gitter.im/jakehschwartz/finatra-swagger?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![CircleCI](https://circleci.com/gh/jakehschwartz/finatra-swagger/tree/master.svg?style=svg)](https://circleci.com/gh/jakehschwartz/finatra-swagger/tree/master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/02f5a150c842471cb8415b6510ed0ab6)](https://www.codacy.com/app/jakehschwartz54/finatra-swagger?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jakehschwartz/finatra-swagger&amp;utm_campaign=Badge_Grade)
 
 Add [Swagger UI](http://swagger.io/swagger-ui/) support to [Finatra](https://github.com/twitter/finatra) web framework.
 
-Currently supports Scala 2.12 with Finatra 2.10 or 2.9. 
+Currently supports Scala 2.12 & 2.11 with Finatra 2.13
 
 For older versions, see the original repository by [xiaodongw](https://github.com/xiaodongw/swagger-finatra)
 
@@ -14,7 +13,9 @@ For older versions, see the original repository by [xiaodongw](https://github.co
 
 The major and minor version of the library matches the Finatra major and minor version:
 
-    libraryDependencies += "com.jakehschwartz" %% "finatra-swagger" % "2.10.0"
+```scala
+libraryDependencies += "com.github.ikhoon" %% "finatra-swagger" % "2.13.0"
+```
 
 First, create a subclass of a SwaggerModule
 
