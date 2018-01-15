@@ -6,7 +6,7 @@ import javax.inject.{Inject, Singleton}
 
 import com.twitter.finagle.http.{Message, Request}
 import com.twitter.finatra.http.Controller
-import com.twitter.finatra.http.routing.FileResolver
+import com.twitter.finatra.utils.FileResolver
 import com.twitter.inject.annotations.Flag
 import io.swagger.models.Swagger
 import io.swagger.util.Json
