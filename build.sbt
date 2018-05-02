@@ -1,3 +1,5 @@
+import ReleaseTransformations._
+
 name := "finatra-swagger"
 
 organization := "com.github.ikhoon"
@@ -8,6 +10,22 @@ crossScalaVersions := Seq("2.11.11", "2.12.4")
 
 releaseCrossBuild := true
 //sbtVersion := "0.13.16"
+
+releaseProcess := Seq[ReleaseStep](
+  checkSnapshotDependencies,
+  inquireVersions,
+  runClean,
+  runTest,
+  setReleaseVersion,
+  commitReleaseVersion,
+  tagRelease,
+  releaseStepCommand("publishSigned"),
+  setNextVersion,
+  commitNextVersion,
+  releaseStepCommand("sonatypeReleaseAll"),
+  //ReleaseStep(action = Command.process("sonatypeReleaseAll", _)),
+  pushChanges
+)
 
 libraryDependencies ++= Seq(
   "com.twitter" %% "finatra-http" % "18.4.0",
