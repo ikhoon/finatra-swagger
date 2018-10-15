@@ -4,9 +4,9 @@ name := "finatra-swagger"
 
 organization := "com.github.ikhoon"
 
-scalaVersion := "2.12.4"
+scalaVersion := "2.12.7"
 
-crossScalaVersions := Seq("2.11.11", "2.12.4")
+crossScalaVersions := Seq("2.11.11", "2.12.7")
 
 releaseCrossBuild := true
 //sbtVersion := "0.13.16"
@@ -28,7 +28,7 @@ releaseProcess := Seq[ReleaseStep](
 )
 
 libraryDependencies ++= Seq(
-  "com.twitter" %% "finatra-http" % "18.4.0",
+  "com.twitter" %% "finatra-http" % "18.9.1",
   "io.swagger" % "swagger-core" % "1.5.17",
   "io.swagger" %% "swagger-scala-module" % "1.0.4",
   "org.webjars" % "swagger-ui" % "3.2.0",
