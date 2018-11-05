@@ -10,6 +10,7 @@ crossScalaVersions := Seq("2.11.11", "2.12.7")
 
 releaseCrossBuild := true
 //sbtVersion := "0.13.16"
+releasePublishArtifactsAction := PgpKeys.publishSigned.value
 
 releaseProcess := Seq[ReleaseStep](
   checkSnapshotDependencies,
@@ -19,11 +20,12 @@ releaseProcess := Seq[ReleaseStep](
   setReleaseVersion,
   commitReleaseVersion,
   tagRelease,
-  releaseStepCommand("publishSigned"),
+//  releaseStepCommand("publishSigned"),
+  publishArtifacts,
   setNextVersion,
   commitNextVersion,
   releaseStepCommand("sonatypeReleaseAll"),
-  //ReleaseStep(action = Command.process("sonatypeReleaseAll", _)),
+//  ReleaseStep(action = Command.process("sonatypeReleaseAll", _)),
   pushChanges
 )
 
