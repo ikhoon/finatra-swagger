@@ -30,7 +30,7 @@ releaseProcess := Seq[ReleaseStep](
 )
 
 libraryDependencies ++= Seq(
-  "com.twitter" %% "finatra-http" % "18.9.1",
+  "com.twitter" %% "finatra-http" % "19.2.0",
   "io.swagger" % "swagger-core" % "1.5.17",
   "io.swagger" %% "swagger-scala-module" % "1.0.4",
   "org.webjars" % "swagger-ui" % "3.2.0",
